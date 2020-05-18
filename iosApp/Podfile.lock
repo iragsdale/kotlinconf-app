@@ -11,12 +11,11 @@ DEPENDENCIES:
   - youtube-ios-player-helper (~> 0.1.4)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - Mapbox-iOS-SDK
-    - youtube-ios-player-helper
   trunk:
+    - Mapbox-iOS-SDK
     - MarqueeLabel
     - Nuke
+    - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   Mapbox-iOS-SDK: 3e095b305126d52ba166fe215d847b15b6fbee63
@@ -26,4 +25,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 548cf3d99fb5577718a66192a583cf416b055a16
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1
