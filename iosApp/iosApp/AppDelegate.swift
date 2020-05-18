@@ -9,6 +9,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidFinishLaunching(_ application: UIApplication) {
         UIApplication.shared.registerForRemoteNotifications()
+
+        let center = UNUserNotificationCenter.current()
+        if #available(iOS 12.0, *) {
+            center.requestAuthorization(options: [.alert, .sound, .badge, .provisional]) { granted, error in
+                if let error = error {
+                    print("Could not request permission for notifications: \(error)")
+                }
+                else {
+                    print("Granted perms: \(granted)")
+                }
+            }
+        } else {
+            print("Cannot request permissions")
+        }
+
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
